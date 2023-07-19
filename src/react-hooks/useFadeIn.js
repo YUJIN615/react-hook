@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const useFadeIn = (duration = 2, delay = 0) => {
   const element = useRef();
@@ -12,8 +12,6 @@ const useFadeIn = (duration = 2, delay = 0) => {
   }, []);
   return {ref: element, style: {opacity: 0}};
 }
-
-
 
 function App() {
   const fadeInH1 = useFadeIn(undefined, 3);
